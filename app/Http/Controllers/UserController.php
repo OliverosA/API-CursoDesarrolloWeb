@@ -38,7 +38,7 @@ class UserController extends Controller
         else{
             return response()->json([
                 'res' => false,
-                'message' => 'Cuenta o Password Incorrecto'
+                'message' => 'Cuenta o Contraseña Incorrecto'
             ],  200);
         }
     }
@@ -52,6 +52,7 @@ class UserController extends Controller
         });
         $user->save();
         //fin del codigo
+
 
         //otra forma de hacerlo pero revocando el token del dispositivo donde
         //realizo logout y no todos los relacionados al usuario
